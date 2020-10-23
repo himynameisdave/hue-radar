@@ -18,6 +18,8 @@
 **`hue-radar`** is a CLI tool for discovering all of the colors used in your project.
 
 ## Purpose
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fhue-radar.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Fhue-radar?ref=badge_shield)
+
 
 If not maintained well, large and long-running web app projects are likely to have colors littered throughout the codebase. This can make it difficult for your design or front-end team to audit, scale and maintain in the long run. This tool was created to help you identify and wrangle every color in your codebase.
 
@@ -66,3 +68,7 @@ When submitting pull requests, at the very least please add unit tests for any n
 
 ---
 > _✌️ Built by [Dave](https://github.com/himynameisdave)._
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fhue-radar.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Fhue-radar?ref=badge_large)
