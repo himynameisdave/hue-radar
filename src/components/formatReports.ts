@@ -10,9 +10,7 @@ import type { ReportEntry, ColorsReport } from '../types';
 export default function formatReports(fileReports: ReportEntry[][]): ColorsReport {
   const allColors: ColorsReport = {};
   const reports = flatten<ReportEntry>(fileReports);
-  reports.forEach(({
-    colors, ...entry
-  }) => {
+  reports.forEach(({ colors, ...entry }) => {
     [...colors].forEach(color => {
       allColors[color] = allColors[color]?.length > 0 // eslint-disable-line @typescript-eslint/no-unnecessary-condition
         ? [

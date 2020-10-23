@@ -7,11 +7,9 @@ export const DEFAULT_GLOBS = [
   '!node_modules/**/*',
 ];
 
-const GLOBBY_OPTIONS = {
-  cwd: process.cwd(),
+const GLOBBY_OPTIONS = { cwd: process.cwd(),
   expandDirectories: true,
-  gitignore: true,
-};
+  gitignore: true };
 
 /**
  * Wrapper for globby to return a list of files to search on.

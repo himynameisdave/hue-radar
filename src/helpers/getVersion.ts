@@ -5,8 +5,6 @@ import readPkg from 'read-pkg-up';
  * This is done instead of importing it directly, because it is outside of `src/`, so TS complains.
  */
 export default function getVersion(): string {
-  const result = readPkg.sync({
-    cwd: __dirname,
-  });
+  const result = readPkg.sync({ cwd: __dirname });
   return result?.packageJson.version ?? '';
 }

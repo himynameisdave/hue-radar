@@ -4,15 +4,12 @@ import { extractColors } from '../helpers';
 import type { Color, ReportEntry } from '../types';
 
 
-const BYLINE_OPTIONS = {
-  keepEmptyLines: true, // Required so that we can get an accurate count on the
-};
+// Required option so that we can get an accurate count on the
+const BYLINE_OPTIONS = { keepEmptyLines: true };
 
 //  Returns a stream, where each chunk is a line.
 function getStream(filePath: string): NodeJS.ReadableStream {
-  return byline(fs.createReadStream(filePath, {
-    encoding: 'utf8',
-  }), BYLINE_OPTIONS);
+  return byline(fs.createReadStream(filePath, { encoding: 'utf8' }), BYLINE_OPTIONS);
 }
 
 /**
