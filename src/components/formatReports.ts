@@ -1,4 +1,5 @@
-import flatten from '../utils/flatten';
+import { colorConvert } from '../helpers';
+import { flatten } from '../utils';
 import type { ReportEntry, ColorsReport } from '../types';
 
 
@@ -9,9 +10,10 @@ import type { ReportEntry, ColorsReport } from '../types';
  */
 export default function formatReports(fileReports: ReportEntry[][]): ColorsReport {
   const allColors: ColorsReport = {};
-  const reports = flatten<ReportEntry>(fileReports);
-  reports.forEach(({ colors, ...entry }) => {
-    [...colors].forEach(color => {
+  const discoveries = flatten<ReportEntry>(fileReports);
+  discoveries.forEach(({ colors, ...entry }) => {
+    [...colors].forEach((colorString: string) => {
+      const color = colorConvert(colorString);
       allColors[color] = allColors[color]?.length > 0 // eslint-disable-line @typescript-eslint/no-unnecessary-condition
         ? [
           ...allColors[color],
