@@ -30,6 +30,8 @@ It's sort of like `grep`ing for various colors, but better for the following rea
 
 ## Installation
 
+> _Note: This has only been tested on NodeJS v12+. It is unlikely to work on versions below this._
+
 Install the tool in your project, or (optionally) you can do it globally.
 
 ```bash
