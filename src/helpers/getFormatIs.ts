@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline */
 export const SUPPORTED_FORMATS = {
   JSON: 'json',
   HTML: 'html',
