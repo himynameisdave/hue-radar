@@ -1,3 +1,4 @@
+import type commander from 'commander';
 import { colorConvert } from '../helpers';
 import { flatten } from '../utils';
 import type { ReportEntry, ColorsReport } from '../types';
@@ -8,12 +9,14 @@ import type { ReportEntry, ColorsReport } from '../types';
  *
  * @param {ReportEntry[][]} fileReports - Array of file report entries (see lineReader module).
  */
-export default function formatReports(fileReports: ReportEntry[][]): ColorsReport {
+export default function formatReports(fileReports: ReportEntry[][], program: commander.Command): ColorsReport {
   const allColors: ColorsReport = {};
   const discoveries = flatten<ReportEntry>(fileReports);
   discoveries.forEach(({ colors, ...entry }) => {
     [...colors].forEach((colorString: string) => {
-      const color = colorConvert(colorString);
+      const color = program.convertToHex as boolean
+        ? colorConvert(colorString)
+        : colorString;
       allColors[color] = allColors[color]?.length > 0 // eslint-disable-line @typescript-eslint/no-unnecessary-condition
         ? [
           ...allColors[color],

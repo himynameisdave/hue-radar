@@ -15,7 +15,7 @@ const program = initProgram();
   log.info('🎨 Searching for colors.');
   const paths = await globby(program.patterns);
   const reports = await Promise.all(paths.map(lineReader));
-  const colors = formatReports(reports);
+  const colors = formatReports(reports, program);
   const colorsCount = Object.keys(colors).length;
   log.success(`🕵️‍♀️ Discovered ${colorsCount} colors in this project!`);
 

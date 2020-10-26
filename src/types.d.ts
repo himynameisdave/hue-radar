@@ -31,3 +31,14 @@ export type ReportEntry = {
 export type ColorsReport = {
   [K: string]: Array<Omit<ReportEntry, 'colors'>>;
 };
+
+//  Option constant for program option constants.
+type ProgramOption = {
+  FLAGS: string[];
+  DESCRIPTION: string;
+  DEFAULT?: string | boolean;
+};
+
+export type ProgramOptions = {
+  [K: string]: ProgramOption;
+};

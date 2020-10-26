@@ -34,7 +34,8 @@ module.exports = {
     "arrow-parens": ["error", "as-needed"],
     "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-    "object-curly-newline": ["error", {
+    //  yikes:
+    "object-curly-newline": ["off", {
       "minProperties": 4,
     }],
     "implicit-arrow-linebreak": "off",

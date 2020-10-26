@@ -3,14 +3,14 @@
   <p style="font-style: italic;">
     🎨 A tool for discovering all of the colors used in your project.
   </p>
-  <!--
   <div>
-    BADGES
-    <a href='https://travis-ci.com/github/himynameisdave/svelte-flex'>
-        <img src="https://travis-ci.com/himynameisdave/svelte-flex.svg?branch=master" alt="Travis Badge" />
+    <a href="https://travis-ci.com/github/himynameisdave/hue-radar">
+      <img src="https://travis-ci.com/himynameisdave/hue-radar.svg?branch=main" alt="Travis Badge" />
+    </a>
+    <a href="https://coveralls.io/github/himynameisdave/hue-radar?branch=main">
+      <img src="https://coveralls.io/repos/github/himynameisdave/hue-radar/badge.svg?branch=main" alt="Coveralls Badge" />
     </a>
   </div>
-  -->
 </div>
 
 ---
@@ -50,13 +50,13 @@ hue-radar -p "*/**.{less,jsx}"
 
 ### Options
 
-Option | Description | Default
---- | --- | ---
-`--pattern, -p` | Glob pattern for files to match. [More info](https://github.com/isaacs/minimatch#usage). _Note that defaults are included before these patterns., so specify overrides if they do not suit you._ | `"**/*.css,!node_modules/**/*"`
-`--debug, -d` | Print debug statements. | `false`
-`--format, -f` | Output format for the color report, `json` or `html` | `json`
-`--output, -o` | Path to the color report outputted file _(optional)_. | `hue-radar.report.{format}`
-
+Option | Description | Default | Notes
+--- | --- | --- | ---
+`--pattern, -p` | Glob pattern for files to match. [More info](https://github.com/isaacs/minimatch#usage). | `"**/*.css,!node_modules/**/*"` | _Defaults are always included before these patterns., so specify overrides if these do not suit you._
+`--debug, -d` | Print debug statements. | `false` | 
+`--format, -f` | Output format for the color report, `json` or `html` | `json` | 
+`--output, -o` | Path to the color report outputted file _(optional)_. | `hue-radar.report.{format}` | 
+`--convert-to-hex, -h` | Converts all rgb/hsl colors in the report to hex, for grouping purposes. | `false` | You will still see the discovered source color, this just helps group same colors.
 
 ## Contributing
 
